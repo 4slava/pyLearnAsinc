@@ -1,0 +1,23 @@
+The asyncio loop API:
+    asyncio.run(main())
+is the same:
+    loop = asyncio.get_event_loop()
+    lop.run_until_complete(main())
+    loop.close()
+
+if loop is running:
+    loop = asyncio.get_running_event_loop()
+
+put in queue without run:
+    loop.create.task(main())
+
+run without conditions:
+    loop.run_forever()
+
+only stop loop without close:
+    loop.stop()
+
+status loop (True or False):
+    loop.is_closed()
+    loop.is_running()
+
